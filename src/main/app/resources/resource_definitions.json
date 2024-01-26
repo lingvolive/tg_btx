@@ -1,0 +1,741 @@
+{   
+  
+  "supported_languages":{ 
+    "type": "languages",
+    "lang":{"en":"🇬🇧 English", "ru":"🇷🇺 Русский" }
+  },
+
+  "command_start": {
+    "type": "command", 
+    "str": {"default": "/start" }
+  },
+
+  "command_admin": {
+    "type": "command", 
+    "str": {"default": "/an" }
+  },
+
+  "command_start_descr": {
+    "type": "command", 
+    "str": {"ru": "Старт", "en":"Start" }
+  },
+
+  "strRoleAdmin": {
+    "type":"string",   
+    "is_using_format": false, 
+    "str": {
+      "ru": "Администратор", 
+      "en": "Administrator"
+     }
+  },
+
+  "strRoleManager": {
+    "type":"string",   
+    "is_using_format": false, 
+    "str": {
+      "ru": "Руководитель проектов", 
+      "en": "Project manager"
+     }
+  },
+
+  "strRoleEmployee": {
+    "type":"string",   
+    "is_using_format": false, 
+    "str": {
+      "ru": "Сотрудник", 
+      "en": "Employee"
+     }
+  },
+
+  "strEnterEmail": {
+    "type":"string",   
+    "is_using_format": false, 
+    "str": {
+      "ru": "📝  Введите e-mail", 
+      "en": "📝  Enter email"
+     }
+  },
+
+  "strEnterName": {
+    "type":"string",   
+    "is_using_format": false, 
+    "str": {
+      "ru": "📝  Введите имя и фамилию", 
+      "en": "📝  Enter email"
+     }
+  },
+
+  "strEnterPhone": {
+    "type":"string",   
+    "is_using_format": false, 
+    "str": {
+      "ru": "📝  Введите номер телефона в формате +7XXXXXXXXXX", 
+      "en": "📝  Enter email"
+     }
+  },
+
+  "strWaitConfirmation": {
+    "type":"string",   
+    "is_using_format": false, 
+    "str": {
+      "ru": ["🕒  Ожидайте подтверждения от администратора",
+             "Он уже получил оповещение"], 
+      "en": "🕒  Please wait for confirmation from the administrator"
+     }
+  },
+
+  "strUserNotAuth": {
+    "type":"string",   
+    "is_using_format": false, 
+    "str": {
+      "ru": "🚷 Пользователь не авторизован",
+      "en": "🚷 User is not authorized"
+     }
+  },
+
+  "strNotAuth": {
+    "type":"string",   
+    "is_using_format": false, 
+    "str": {
+      "ru": "🚷",
+      "en": "🚷"
+     }
+  },
+
+  "strChooseManager": {
+    "type":"string",   
+    "is_using_format": false, 
+    "str": {
+      "ru": "🧐 Выберите пользователя Bitrix24",
+      "en": "🧐 Select user of Bitrix24"
+     }
+  },
+
+  "strUserFIO": {
+    "type":"string",   
+    "is_using_format": false, 
+    "str": {
+      "ru": "ФИО",
+      "en": "Full name"
+     }
+  },
+
+  "strUserName": {
+    "type":"string",   
+    "is_using_format": false, 
+    "str": {
+      "ru": "Имя пользователя в телеграм",
+      "en": "Telegram username"
+     }
+  },
+
+  "strEmail": {
+    "type":"string",   
+    "is_using_format": false, 
+    "str": {
+      "ru": "E-mail",
+      "en": "E-mail"
+     }
+  },
+
+  "strPhone": {
+    "type":"string",   
+    "is_using_format": false, 
+    "str": {
+      "ru": "Номер телефона",
+      "en": "Phone number"
+     }
+  },
+
+  "strManager": {
+    "type":"string",   
+    "is_using_format": false, 
+    "str": {
+      "ru": "Пользователь Bitrix24",
+      "en": "User of Bitrix24"
+     }
+  },
+
+  "strNotSpecified": {
+    "type":"string",   
+    "is_using_format": false, 
+    "str": {
+      "ru": "❓ <Не указан>",
+      "en": "❓ <Not specified>"
+     }
+  },
+
+  "strRoles": {
+    "type":"string",   
+    "is_using_format": false, 
+    "str": {
+      "ru": "Роли",
+      "en": "Roles"
+     }
+  },
+
+  "strProfile": {
+    "type":"string",   
+    "is_using_format": false, 
+    "str": {
+      "ru": "👤 Профиль",
+      "en": "👤 Profile"
+     }
+  },
+
+  "btnProfileViewMenu":{
+    "type":"button",
+    "action_id": "ACTION_PROFILEVIEW_MENU",
+    "caption": "strProfile",
+    "roles": ["admin", "manager", "employee" ]
+    
+  },
+
+  "strAdminRightGranted": {
+    "type":"string",   
+    "is_using_format": false, 
+    "str": {
+      "ru": "🚀 Установлены права администратора",
+      "en": "🚀 Administrator rights granted"
+     }
+  },
+
+
+  "mMainMenu":{
+    "type":"menu",
+    "menu_id": "MAIN_MENU",
+    "buttons_inline":{
+      "0":["btnLaborCostReport"], "1":["btnSettings"],"2":["btnHelp"]
+    }
+   
+  },
+
+  "mNotImplementedMenu":{
+    "type":"menu",
+    "menu_id": "NOT_IMPLEMENTED_MENU",
+    "buttons_inline":{"0":["btnBack"]}
+
+  },
+
+  "mSettingsMenu":{
+    "type":"menu",
+    "menu_id": "SETTINGS_MENU",
+    "buttons_inline":{
+      "0":["btnProfileViewMenu"], "1":["btnManageUsersMenu"],
+      "2":["btnSettingsLanguage"],"3":["btnBack"]
+    }
+
+  },
+
+  "mProfileViewMenu":{
+    "type":"menu",
+    "menu_id": "PROFILEVIEW_MENU",
+    "buttons_inline":{"0":["btnBack"]}
+  },
+
+  "mUserManageMenu":{
+    "type":"menu",
+    "menu_id": "USER_MANAGE_MENU",
+    "buttons_inline":{"0":["btnSetRole"], "1":["btnSetManager"],
+                      "2":["btnBlockUser"], "3":["btnBack"]  
+                    }
+  },
+
+  "mLaborCostReportMenu":{
+    "type":"menu",
+    "menu_id": "LABOR_COST_REPORT_MENU",
+    "buttons_inline":{"0":["btnGenerateReport"], "1":["btnFilters"], "2":["btnBack"]}
+  },
+
+  "mLaborCostReportReadyMenu":{
+    "type":"menu",
+    "menu_id": "LABOR_COST_REPORT_READY_MENU",
+    "buttons_inline":{
+      "1":["btnMainMenu"]
+    }
+   
+  },
+
+  "btnFilters":{
+    "type":"button",
+    "action_id": "ACTION_FILTERS_LCR",
+    "caption": "strBtnFilters",
+    "roles": ["employee" ]
+    
+  },
+
+  "strBtnFilters": {
+    "type":"string",
+    "str": {
+       "ru": "🔍 Отборы",
+       "en": "🔍 Filters"
+      }
+ },
+
+ "btnGenerateReport":{
+  "type":"button",
+  "action_id": "ACTION_GENERATE_REPORT_LCR",
+  "caption": "strBtnGenerateReport",
+  "roles": ["employee" ]
+  
+  },
+
+  "strBtnGenerateReport": {
+    "type":"string",
+    "str": {
+      "ru": "📊 Сформировать отчет",
+      "en": "📊 Generate report"
+      }
+  },
+
+  "mLaborCostReportFilterMenu":{
+    "type":"menu",
+    "menu_id": "LCR_FILTER_MENU",
+    "buttons_inline":{"0":["btnFilterDate"], "1":["btnFilterProject"], 
+                      "2":["btnFilterEmployee"], "3":["btnResetFilter"],
+                      "4":["btnBack"]
+                    }
+  },
+
+  "btnResetFilter":{
+    "type":"button",
+    "action_id": "ACTION_FILTER_RESET",
+    "caption": "strBtnResetFilter",
+    "roles": ["employee" ]
+    
+  },
+
+  "strBtnResetFilter": {
+    "type":"string",
+    "str": {
+      "ru": "❌ Сбросить",
+      "en": "❌ Reset"
+      }
+  },
+
+  "btnFilterDate":{
+    "type":"button",
+    "action_id": "ACTION_FILTER_DATE",
+    "caption": "strBtnFilterDate",
+    "roles": [ "employee" ]
+    
+  },
+
+  "strBtnFilterDate": {
+    "type":"string",
+    "str": {
+      "ru": "Период отчета",
+      "en": "Report Period"
+      }
+  },
+
+  "btnFilterProject":{
+    "type":"button",
+    "action_id": "ACTION_FILTER_PROJECT",
+    "caption": "strBtnFilterProject",
+    "roles": ["employee" ]
+    
+  },
+
+  "strBtnFilterProject": {
+    "type":"string",
+    "str": {
+      "ru": "Проекты",
+      "en": "Projects"
+      }
+  },
+
+  "btnFilterEmployee":{
+    "type":"button",
+    "action_id": "ACTION_FILTER_EMPLOYEE",
+    "caption": "strBtnFilterEmployee",
+    "roles": ["manager"]
+    
+  },
+
+  "strBtnFilterEmployee": {
+    "type":"string",
+    "str": {
+      "ru": "Сотрудники",
+      "en": "Employees"
+      }
+  },
+
+
+  "mHelpMenu":{
+    "type":"menu",
+    "menu_id": "HELP_MENU",
+    "buttons_inline":{"0":["btnBack"]}
+  },
+
+  
+  "btnMainMenu":{
+    "type":"button",
+    "action_id": "ACTION_MAIN_MENU",
+    "caption": "strBtnMainMenu",
+    "roles": ["employee" ]
+    
+  },
+
+  "strBtnMainMenu": {
+    "type":"string",
+    "str": {
+       "ru": "Главное меню",
+       "en": "Main menu"
+      }
+ },
+
+  "btnSetRole":{
+    "type":"button",
+    "action_id": "ACTION_SET_ROLE",
+    "caption": "strBtnSetRole",
+    "roles": ["admin" ]
+  
+  } ,
+
+ "btnSetManager":{
+  "type":"button",
+  "action_id": "ACTION_SET_MANAGER",
+  "caption": "strBtnSetManager",
+  "roles": ["admin" ]
+  
+ },
+
+ "btnBlockUser":{
+  "type":"button",
+  "action_id": "ACTION_BLOCK_USER",
+  "caption": "strBtnBlockUser",
+  "roles": ["admin" ]
+  
+ },
+
+ "strBtnSetRole": {
+  "type":"string",
+  "str": {
+    "ru": "🎭 Назначить роли", 
+    "en": "🎭 Set roles"
+  }
+},
+
+"btnLaborCostReport":{
+  "type":"button",
+  "action_id": "ACTION_SEND_D_REPORT",
+  "caption": "strLaborCostReport",
+  "roles": ["employee" ]
+  
+ },
+
+ "strLaborCostReport": {
+  "type":"string",
+  "str": {
+    "ru": "🕒 Отчет по трудозатратам", 
+    "en": "🕒 Labor cost report"
+  }
+},
+
+  "strDailyReportMenuBottom": {
+    "type":"string",
+    "str": {
+      "ru": "💬 Отправьте необходимы файлы и комментарий к отчету", 
+      "en": "💬 Please send the required files and comment for the report"
+    }
+  },
+
+  "strBtnSetManager": {
+    "type":"string",
+    "str": {
+      "ru": "👥 Назначить пользователя Bitrix24", 
+      "en": "👥 Assign user of Bitrix24"
+    }
+  },
+
+  "strSendDailyReportCaption": {
+    "type":"string",
+    "str": {
+      "ru": "✔️ Завершить формирование отчета", 
+      "en": "✔️ Save report"
+    }
+  },
+
+  "strReportAlreadySent": {
+    "type":"string",
+    "str": {
+      "ru": "🚫 Отчет отправлен. Корректировка невозможна", 
+      "en": "🚫 Report sent. Modification not possible"
+    }
+  },
+
+
+  "strBtnBlockUser": {
+    "type":"string",
+    "str": {
+      "ru": "⛔ Заблокировать пользователя", 
+      "en": "⛔ Block user"
+    }
+  },
+
+  "strAttachedFilesCaption": {
+    "type":"string",
+    "str": {
+      "ru": "📎 Прикрепленные файлы", 
+      "en": "📎 Attached files"
+    }
+  },
+
+  "strProjectCaption": {
+    "type":"string",
+    "str": {
+      "ru": "🏗️ Проект", 
+      "en": "🏗️ Project"
+    }
+  },
+
+  "strEmployeeCaption": {
+    "type":"string",
+    "str": {
+      "ru": "🧑‍💼 Сотрудник", 
+      "en": "🧑‍💼 Employee"
+    }
+  },
+
+  "strAvailableFilters": {
+    "type":"string",
+    "str": {
+      "ru": "🔍 Управление отборами:", 
+      "en": "🔍 Filters management:"
+    }
+  },
+
+  "strDateFilter": {
+    "type":"string",
+    "str": {
+      "ru": "🔍 Установите отбор по дате", 
+      "en": "🔍 Set date filter"
+    }
+  },
+
+  "strProjectFilter": {
+    "type":"string",
+    "str": {
+      "ru": "🔍 Установите отбор по проекту:       ", 
+      "en": "🔍 Set project filter"
+    }
+  },
+
+  "strEmployeeFilter": {
+    "type":"string",
+    "str": {
+      "ru": "🔍 Установите отбор по сотруднику:", 
+      "en": "🔍 Set emloyee filter"
+    }
+  },
+
+  "strCommentCaption": {
+    "type":"string",
+    "str": {
+      "ru": "💬 Комментарий", 
+      "en": "💬 Comment"
+    }
+  },
+
+  "strReportStatusSent": {
+    "type":"string",
+    "str": {
+      "ru": "🟢 Статус: Отправлен", 
+      "en": "🟢 State: Sent"
+    }
+  },
+
+  "strReportStatNotSent": {
+    "type":"string",
+    "str": {
+      "ru": "🔴 Статус: Не отправлен", 
+      "en": "🔴 State: Not sent"
+    }
+  },
+
+  "btnSettingsLanguage":{
+    "type":"button",
+    "action_id": "ACTION_SET_LANG",
+    "caption": "strSettingsLanguage",
+    "roles": ["employee" ]
+
+  },
+
+  "strSettingsLanguage": {
+    "type":"string",
+    "str": {
+      "ru": "🌐 Язык интерфейса", 
+      "en": "🌐 Interface Language"
+    }
+  },
+
+  "btnBack":{
+    "type":"button",
+    "action_id": "ACTION_BACK",
+    "caption": "strBack",
+    "roles": ["employee" ]
+
+  },
+
+  "strBack": {
+    "type":"string",
+    "str": {
+      "ru": "← Назад", 
+      "en": "← Back"
+    }
+  },
+
+  "btnManageUsersMenu":{
+    "type":"button",
+    "action_id": "ACTION_MANAGE_USERS_MENU",
+    "caption": "strBtnManageUsers",
+    "roles":["admin"]
+    
+  },
+
+  "strBtnManageUsers": {
+    "type":"string",
+    "str": {
+      "ru": "🧑‍💼 Управление пользователями", 
+      "en": "🧑‍💼 User management"
+    }
+  },
+
+  "strMainMenuLink": {
+    "type":"string",
+    "str": {
+      "ru": "← Главное меню", 
+      "en": "← Main menu"
+    }
+  },
+
+  "strMainMenu": {
+    "type":"string",
+    "str": {
+       "ru": "*Главное меню:*\n",
+       "en": "*Main menu:*\n"
+      }
+ }, 
+
+  "btnSettings":{
+    "type":"button",
+    "action_id": "ACTION_SETTINGS",
+    "caption": "strSettingsBtn",
+    "roles": ["employee" ]
+    
+  },
+
+  "strSettingsBtn": {
+    "type":"string",
+    "str": {
+      "ru": "⚙️ Настройки", 
+      "en": "⚙️ Settings"
+      }
+  },
+
+  "btnHelp":{
+        "type":"button",
+        "action_id": "ACTION_HELP",
+        "caption": "strHelpBtn",
+        "roles": ["xxx" ]
+    },
+    
+  "strHelpBtn": {
+    "type":"string",
+    "str": {
+      "ru": "❓ Помощь", 
+      "en": "❓ Help"
+      }
+  },
+  
+
+  "strHelp": { 
+    "type":"string",
+    "str": {
+      "ru": [
+        "🆘 Помощь: Бот для перевода и исправления текста 🆘",
+        " ",
+        " ",
+        "*Этот бот 🤖 может:*",
+        " ",
+         "1️⃣ Переводить аудио 🎤 и текст 📝 на другие языки 🌍",
+         "2️⃣ Исправлять текст, написанный ✍️ пользователями, для лучшей грамматики и стиля 📚",
+         " ",
+         "Если у вас возникнут вопросы или вам нужна помощь, просто спросите! 💬"
+         
+      ], 
+      "en": [
+        "🆘 *Help: Translation and Text Correction Bot* 🆘",
+        " ",
+        " ",
+        "This bot 🤖 can:",
+        " ",
+         "1️⃣ Translate audio 🎤 and text 📝 to other languages 🌍",
+         "2️⃣ Correct text written ✍️ by users for better grammar and style 📚",
+         " ",
+         "For any questions or assistance, just ask! 💬"
+        
+       ]
+    }
+  },
+
+  "strAuthRequest": {
+    "type":"string",
+    "str": {
+      "ru": "🔐 Запрос на автризацию", 
+      "en": "🔐 Authorization request"
+      }
+  },
+    
+  "strLoginError": {
+    "type":"string",
+    "str": {
+        "ru": "❗ Пользователь не найден.", 
+        "en": "❗ User is not found"
+    }
+  }, 
+
+  "strHelloMessage": {
+    "type":"string",   
+    "is_using_format": true, 
+    "str": {
+      "ru": " Привет! $user_name", 
+      "en": "Hi! $user_name"
+     }
+  },
+
+
+  "strNotImpelment": {
+    "type":"string",   
+    "is_using_format": false, 
+    "str": {
+      "ru": "🚧 Извините, эта функция еще не реализована.", 
+      "en": "🚧 Sorry, this feature is not implemented yet."
+     }
+  },
+
+  "strDate": {
+    "type":"string",   
+    "is_using_format": false, 
+    "str": {
+      "ru": "📅 Дата", 
+      "en": "📅 Date"
+     }
+  },
+
+  "strInProgress": {
+    "type":"string",   
+    "is_using_format": false, 
+    "str": {
+      "ru": ["⌛ Выполняется обработка запроса.",
+            "Ожидайте..."
+            ], 
+      "en": ["⌛ Processing request.",
+             "Please wait..."
+            ]
+     }
+  }
+ 
+
+}

@@ -1,0 +1,17 @@
+aiogram
+pandas
+sqlalchemy
+icontract
+beartype
+aiohttp
+asyncio
+tqdm
+more_itertools
+openpyxl
+pydub
+openai
+tenacity
+asyncpg
+icontract
+beartype
+xlsxwriter

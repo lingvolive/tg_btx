@@ -1,0 +1,6 @@
+tmpdata/*
+pgdata/*
+logs/*
+src/main/data/*
+src/main/logs/*
+__pycache__

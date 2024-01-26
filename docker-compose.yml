@@ -1,0 +1,51 @@
+version: '3.2'
+services:
+  postgrdb_01:
+    image: postgres:13.3
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      PGDATA: ${PGDATA}
+
+    volumes:
+      - .:${PGDATA_EXT}
+    ports:
+      - '5432:5432'
+    networks:
+      - pstqr
+    restart: always
+    #profiles: ['debug', 'dev']
+
+  app:
+    build:
+      context: src/
+
+      args:
+        PATH_FILES: ${PATH_FILES}
+        APP_PATH: ${APP_PATH}
+        WORK_APP_DIR: ${WOAR_APP_DIR}
+
+    environment:
+      PATH_FILES: ${PATH_FILES}
+      DB_CONN_STR: ${DB_CONN_STR}
+      BOT_TOKEN: ${BOT_TOKEN}
+      BTX_URL_API_BATCH : ${BTX_URL_API_BATCH}
+      ADMIN_PASSWORD    : ${ADMIN_PASSWORD}
+      LANGUAGE          : ${LANGUAGE}
+      TG_LOG_FILE_NAME  : ${TG_LOG_FILE_NAME}
+      TG_LOG_LEVEL      : ${TG_LOG_LEVEL}
+      TG_LOG_ROTATION_INTERVAL : ${TG_LOG_ROTATION_INTERVAL}
+      TG_LOG_FMT       : ${TG_LOG_FMT}
+      TG_LOG_DATE_FMT  : ${TG_LOG_DATE_FMT}
+
+    networks:
+      - pstqr
+    restart: always
+    #profiles: ['dev']
+    depends_on:
+      - postgrdb_01
+
+networks:
+  pstqr:
+    driver: bridge
